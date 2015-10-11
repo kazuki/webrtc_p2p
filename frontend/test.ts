@@ -1,7 +1,11 @@
-/// <reference path="../interfaces/api.d.ts" />
+/// <reference path="../interfaces/api.ts" />
 /// <reference path="../simple/client.ts" />
+
+import IServiceInfo = WebRTCP2P.IServiceInfo;
+import SimpleService = WebRTCP2P.Simple.Client;
+
 class Test {
-    service: IService = null;
+    service: WebRTCP2P.IService = null;
 
     init() {
         document.getElementById('join_service').addEventListener('click', () => {

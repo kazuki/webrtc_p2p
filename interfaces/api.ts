@@ -2,7 +2,9 @@
 
 // クライアントサイドのAPI定義
 
-interface IService {
+module WebRTCP2P {
+
+export interface IService {
     join(): Promise<IServiceInfo>;
     close();
 
@@ -10,18 +12,18 @@ interface IService {
     joinGroup(id: string): Promise<IGroup>;
 }
 
-declare enum GroupCapability {
+export enum GroupCapability {
     BroadcastOwner    = 1,
     BroadcastEveryone = 2,
     UnicastOwner      = 4,
     UnicastEveryone   = 8,
 }
 
-interface IServiceInfo {
+export interface IServiceInfo {
 	id(): string;
 }
 
-interface IGroup {
+export interface IGroup {
     id(): string;
     capability(): GroupCapability;
 
@@ -30,4 +32,6 @@ interface IGroup {
 
     // 指定したIDを持つユーザにデータを送り，返信を受け取ります
     unicast(target: string, data: ArrayBuffer|ArrayBufferView): Promise<ArrayBufferView>;
+}
+
 }

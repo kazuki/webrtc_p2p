@@ -1,5 +1,7 @@
 /// <reference path="../typings/es6-promise.d.ts" />
 
+module WebRTCP2P {
+
 export class WebSocketJsonRpc {
     ws: WebSocket;
     handler: any;
@@ -91,4 +93,6 @@ export class WebSocketJsonRpc {
             'id': null
         }));
     }
+}
+
 }

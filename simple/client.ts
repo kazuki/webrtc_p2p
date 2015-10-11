@@ -1,7 +1,9 @@
-/// <reference path="../interfaces/api.d.ts" />
+/// <reference path="../interfaces/api.ts" />
 /// <reference path="../common/json_rpc.ts" />
 
-class SimpleService implements IService {
+module WebRTCP2P.Simple {
+
+export class Client implements IService {
     ws: WebSocket = null;
     rpc: WebSocketJsonRpc = null;
     ws_url: string;
@@ -48,4 +50,6 @@ class SimpleService implements IService {
             reject('not implemented');
         });
     }
+}
+
 }

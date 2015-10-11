@@ -2,7 +2,7 @@
 /// <reference path="../typings/ws.d.ts" />
 
 import WS = require('ws');
-import JsonRpc = require('../common/json_rpc');
+import JsonRpc = require('../common/json_rpc.external');
 
 import Simple = require('../simple/server');
 var Handler = Simple.SimpleService;

@@ -8,7 +8,7 @@ P2PネットワークをWebRTC DataChannelを使って実現する．
 
 ## API
 
-[interfaces/api.d.ts](./interfaces/api.d.ts)を参照
+[interfaces/api.ts](./interfaces/api.ts)を参照
 
 ## ディレクトリ構造
 
