@@ -1,7 +1,8 @@
-all: index.js
+TARGETS:=index.js
 
+all: $(TARGETS)
 clean:
-	rm -rf index.js
+	rm -rf $(TARGETS)
 
-index.js: *.ts
-	tsc -m commonjs index.ts
+%.js: %.ts
+	tsc -m commonjs $<

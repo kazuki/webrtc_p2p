@@ -1,4 +1,5 @@
 /// <reference path="../interfaces/api.ts" />
+/// <reference path="../common/json_rpc.ts" />
 /// <reference path="../simple/client.ts" />
 
 import IServiceInfo = WebRTCP2P.IServiceInfo;

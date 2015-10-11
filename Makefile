@@ -1,4 +1,4 @@
-SUBDIRS:=common frontend server
+SUBDIRS:=common simple frontend server
 
 all: $(SUBDIRS)
 clean: $(SUBDIRS)

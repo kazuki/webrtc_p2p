@@ -3,7 +3,7 @@ TARGETS=$(FILES:.ts=.external.ts)
 
 all: $(TARGETS)
 clean:
-	rm -f $(TARGETS)
+	rm -f $(TARGETS) $(TARGETS:.ts=.js)
 
 %.external.ts: %.ts
 	cp $< $@ && echo "export = WebRTCP2P;" >> $@
