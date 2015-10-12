@@ -6,6 +6,19 @@
     <script src="test.js" type="text/javascript"></script>
   </head>
   <body>
-    <button id="join_service">Join Service</button>
+    <fieldset style="display:inline-block">
+      <legend>User Info</legend>
+      <div>UserID: <span id="user_id"></span></div>
+    </fieldset>
+    <fieldset style="display:inline-block">
+      <legend>New Group</legend>
+      <button id="create_group">Create</button>
+    </fieldset>
+    <fieldset style="display:inline-block">
+      <legend>Join Existing Group</legend>
+      <label for="join_group_id">GroupID: </label>
+      <input type="text" id="join_group_id">
+      <button id="join_group">Join</button>
+    </fieldset>
   </body>
 </html>

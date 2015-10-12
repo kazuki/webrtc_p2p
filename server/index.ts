@@ -13,7 +13,7 @@ var wss = new WS.Server({
     clientTracking: true
 });
 wss.on('connection', (ws) => {
-    var handler = new Handler(wss, ws, global_state);
+    var handler = new Handler(global_state);
     ws.onclose = (e) => {
         handler._close();
 

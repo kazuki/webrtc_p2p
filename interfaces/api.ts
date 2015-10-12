@@ -7,6 +7,7 @@ module WebRTCP2P {
 export interface IService {
     join(): Promise<IServiceInfo>;
     close();
+    info(): IServiceInfo;
 
     createGroup(cap: GroupCapability): Promise<IGroup>;
     joinGroup(id: string): Promise<IGroup>;
@@ -24,6 +25,8 @@ export interface IServiceInfo {
 }
 
 export interface IGroup {
+    onmessage: (user_id: string, data: ArrayBuffer|ArrayBufferView) => void;
+
     id(): string;
     capability(): GroupCapability;
 
